@@ -6,6 +6,7 @@
 # 大部分 frontmatter 选项仅在使用默认主题时适用
 
 layout: home
+layoutClass: hello
 
 hero:
   name: "小屋文档"
