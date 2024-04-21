@@ -4,7 +4,7 @@
 import { h } from 'vue' // 导入h函数，用于创建虚拟节点
 import { useData } from 'vitepress' // useData函数是vp中用于获取页面数据的钩子函数
 import Theme from 'vitepress/theme' // 这里较模糊，官方文档的Theme是一个接口
-import "../style/layout.css" // 导入样式文件
+import "../style/layout.scss" // 导入样式文件
 import { DefaultTheme } from 'vitepress'
 
 // 导出一个Theme对象
