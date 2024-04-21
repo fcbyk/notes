@@ -46,3 +46,10 @@
         text-decoration-line: none;
       }
 }
+
+// 导航栏不显示
+.delete-nav{
+    .VPNav{
+        display: none;
+    }
+}
