@@ -6,10 +6,12 @@
 # 大部分 frontmatter 选项仅在使用默认主题时适用
 
 layout: home
-layoutClass: hello
 
 hero:
   name: "小屋文档"
   tagline: 目前站点内容较少，佛系更新中...
-
+  actions:
+    - theme: brand
+      text: 前往书签页
+      link: /bookmarks
 ---

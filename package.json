@@ -1,6 +1,7 @@
 {
   "name": "docs",
   "devDependencies": {
+    "@mdit-vue/shared": "^2.1.2",
     "sass": "^1.75.0",
     "vitepress": "^1.1.3"
   },
