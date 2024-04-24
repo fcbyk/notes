@@ -24,7 +24,7 @@ const tabs = ref([
 ]);
 
 const handleClick = (item: string) => {
-  tab.value.style.left = item;
+  tab.value!.style.left = item; // !为非空断言操作符 
   selectedTab.value = item;
 };
 </script>
