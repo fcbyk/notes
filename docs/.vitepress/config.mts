@@ -25,6 +25,23 @@ export default defineConfig({
     docFooter: {
       prev: '上一篇',
       next: '下一篇'
-    }
+    },
+
+    // 配置侧边栏
+    sidebar:{
+      "/pages/navigation-bar":[
+        {
+          text: "导航栏练习",
+          link: "/pages/navigation-bar",
+        }
+      ]
+    },
+
+    nav:[
+      {
+        text: "CSS练习",
+        link: "/pages/navigation-bar"
+      }
+    ]
   }
 })
