@@ -37,54 +37,26 @@ const handleClick = (item: string) => {
 
 ```scss
 nav {
-  // 形状
-  width: 90%;
-  height: 40px;
-  border-radius: 35px;
-  padding: 0;
-  
-  // 背景颜色与阴影
-  background-color: #fff;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
-  
-  // 字体设置
-  line-height: 40px;
-  font-size: 1rem;
-  font-weight: 500;
-  user-select: none;
-
-  // 子元素定位
-  display: flex;
-  position: relative;
-  margin: 2rem 1rem;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  // 形状：[高度宽度,边框圆角的半径,内边距，外边距]
+  // [背景颜色,阴影]
+  // 字体设置: [行高,字体大小,颜色,字重,不可选，居中显示]
+  // 子元素布局：[弹性盒子，对齐方式]
+  // 定位:[相对定位]
 
   .item {
-    flex: 1;
-    width: 100%;
-    position: relative;
-    cursor: pointer;
-    z-index: 1;
-    color: #333;
-    overflow: hidden;
+    // 形状: [宽高]
+    // 定位: [弹性盒子设置]
+    // 显示方式: [z轴，溢出处理，鼠标样式]
   }
 
   .tab {
-    position: absolute;
-    height: 100%;
-    width: 20%;
-    left: 0px;
-    bottom: 0px;
-    background: linear-gradient(to right, #f09819, #ff5858);
-    border-radius: 35px;
-    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    // 形状: [宽高,圆角半径]
+    // 定位: [绝对定位，偏移]
+    // 外观（纯色背景）和过渡效果
   }
 
   .active {
-    color: #fff;
-    transition: 0.6s;
+      // 字体颜色，过渡
   }
 }
 ```

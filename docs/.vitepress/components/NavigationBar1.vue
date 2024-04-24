@@ -6,7 +6,6 @@
     </div>
     <div class="tab" ref="tab"></div>
   </nav>
-
 </template>
 
 <script setup lang="ts">
@@ -47,6 +46,7 @@ nav {
   font-size: 1rem;
   font-weight: 500;
   user-select: none;
+  color: #333;
 
   // 子元素定位
   display: flex;
@@ -59,10 +59,8 @@ nav {
   .item {
     flex: 1;
     width: 100%;
-    position: relative;
     cursor: pointer;
     z-index: 1;
-    color: #333;
     overflow: hidden;
   }
 
