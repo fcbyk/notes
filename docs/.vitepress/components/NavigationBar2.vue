@@ -82,6 +82,7 @@ nav {
     height: 650px;
     background-color: #c584b3;
     overflow: hidden;
+    flex-shrink: 0;
 
     .menus {
         color: #fff;
