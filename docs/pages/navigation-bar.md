@@ -4,6 +4,7 @@ outline: [2,3]
 ---
 <script lang="ts" setup>
 import NavigationBar1 from "../.vitepress/components/NavigationBar1.vue"
+import NavigationBar2 from "../.vitepress/components/NavigationBar2.vue"
 </script>
 
 
@@ -11,11 +12,11 @@ import NavigationBar1 from "../.vitepress/components/NavigationBar1.vue"
 
 <NavigationBar1/>
 
-[以下为伪代码，点击此处可查看源码](https://github.com/fcbyk/docs/blob/main/docs/.vitepress/components/NavigationBar1.vue)
+以下为伪代码，[点击此处查看源码](https://github.com/fcbyk/docs/blob/main/docs/.vitepress/components/NavigationBar1.vue)
 
-结构
+::: code-group
 
-```html
+```html [结构]
 <nav>
   <!-- nav元素下有两种类型的元素，选项div根据需要添加多个 -->
   <div class="item active">选项元素</div>
@@ -23,9 +24,7 @@ import NavigationBar1 from "../.vitepress/components/NavigationBar1.vue"
 </nav>
 ```
 
-逻辑
-
-```javascript
+```Typescript [逻辑]
 const handleClick = (item: string) => {
   // 两个逻辑(点击事件实现)
   // 更改滑动元素的定位 -> 更改css的left
@@ -33,9 +32,7 @@ const handleClick = (item: string) => {
 };
 ```
 
-样式
-
-```scss
+```scss [样式]
 nav {
   // 形状：[高度宽度,边框圆角的半径,内边距，外边距]
   // [背景颜色,阴影]
@@ -60,4 +57,54 @@ nav {
   }
 }
 ```
+:::
 
+### 侧边导航栏
+
+<NavigationBar2/>
+
+以下为伪代码，[点击此处查看源码](https://github.com/fcbyk/docs/blob/main/docs/.vitepress/components/NavigationBar2.vue)
+::: code-group
+
+```html [结构]
+<nav>
+    <!-- 两列表嵌套 -->
+    <ul class="menus">
+        <li class="li">
+            <!-- 图标库,名称 -->
+            <i class="fa fa-comment"></i> 名称
+
+            <!-- 子列表隐藏->宽度设为0 -->
+            <ul><li>内容</li></ul>
+        </li>
+    </ul>
+</nav>
+```
+
+```scss [样式]
+nav {
+	//形状与定位方式
+    .menus {
+        // 字体设置
+        .li {
+            &:hover {
+				// 鼠标悬浮时，列表项背景颜色改变，
+                ul {
+                    // 子列表宽度变化
+                }
+            }
+            .fa { // 图标设置 }
+            ul {
+                // 子列表形状与定位方式，过渡效果
+                li {
+                    // 列表项设置
+                    &:hover {
+                        // 背景颜色变化
+                    }
+                }
+            }
+        }
+    }
+}
+```
+:::

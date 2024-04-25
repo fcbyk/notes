@@ -8,6 +8,11 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
 
   title: "小屋文档",
+
+  head: [
+    // 引入图标库
+    ['link', { rel: 'stylesheet', href: 'https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' }]
+  ],
  
   // 主题相关配置
   themeConfig: {
