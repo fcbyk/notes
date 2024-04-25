@@ -34,10 +34,14 @@ export default defineConfig({
 
     // 配置侧边栏
     sidebar:{
-      "/pages/navigation-bar":[
+      "/pages/":[
         {
           text: "导航栏练习",
           link: "/pages/navigation-bar",
+        },
+        {
+          text: "动画练习",
+          link: "/pages/animation",
         }
       ]
     },
