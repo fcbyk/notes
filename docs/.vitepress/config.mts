@@ -36,11 +36,15 @@ export default defineConfig({
     sidebar:{
       "/pages/":[
         {
-          text: "导航栏练习",
+          text: "导航栏",
           link: "/pages/navigation-bar",
         },
         {
-          text: "动画练习",
+          text: "时钟",
+          link: "/pages/clock",
+        },
+        {
+          text: "动画",
           link: "/pages/animation",
         }
       ]
