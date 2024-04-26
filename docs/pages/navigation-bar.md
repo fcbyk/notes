@@ -5,6 +5,7 @@ outline: [2,3]
 <script lang="ts" setup>
 import NavigationBar1 from "../.vitepress/components/NavigationBar1.vue"
 import NavigationBar2 from "../.vitepress/components/NavigationBar2.vue"
+import NavigationBar3 from "../.vitepress/components/NavigationBar3.vue"
 </script>
 
 
@@ -101,6 +102,48 @@ nav {
                     &:hover {
                         // 背景颜色变化
                     }
+                }
+            }
+        }
+    }
+}
+```
+:::
+
+### 可下拉导航栏
+
+<NavigationBar3/>
+
+以下为伪代码，[点击此处查看源码](https://github.com/fcbyk/docs/blob/main/docs/.vitepress/components/NavigationBar3.vue)
+::: code-group
+
+```html [结构]
+<!-- 两个无序列表嵌套 -->
+<ul class="nav">
+    <li>
+        <span>消息</span>
+        <ul><li>回复我的</li></ul>
+    </li>
+</ul>
+```
+
+```scss [样式]
+.nav {
+    // 弹性盒子
+    li {
+        // 长宽设置，字体设置等
+        &:hover {
+            // 颜色变化
+            li {
+                // 控制高度，透明度等
+            }
+        }
+        // 次列表项
+        ul {
+            li {
+                // 透明度为0，高度为0等设置
+                &:hover {
+                   // 颜色变化
                 }
             }
         }
