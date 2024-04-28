@@ -34,27 +34,64 @@ export default defineConfig({
 
     // 配置侧边栏
     sidebar:{
-      "/pages/":[
+      "/css/":[
         {
           text: "导航栏",
-          link: "/pages/navigation-bar",
+          link: "/css/navigation-bar",
         },
         {
           text: "时钟",
-          link: "/pages/clock",
+          link: "/css/clock",
         },
         {
           text: "动画",
-          link: "/pages/animation",
+          link: "/css/animation",
+        }
+      ],
+      "/":[
+        {
+          text: "关于本站",
+          link: "/",
+        },
+        {
+          text: "域名由来",
+          link: "/name",
         }
       ]
     },
 
     nav:[
       {
-        text: "CSS练习",
-        link: "/pages/navigation-bar"
+        text: "CSS",
+        link: "/css/navigation-bar"
+      },
+      {
+        text: "书签",
+        link: "/bookmarks/"
       }
-    ]
+    ],
+    search: {
+      provider: 'local',
+      options: {
+        locales: {
+          root: {
+            translations: {
+              button: {
+                buttonText: '搜索文档',
+                buttonAriaLabel: '搜索文档'
+              },
+              modal: {
+                noResultsText: '无法找到相关结果',
+                resetButtonTitle: '清除查询条件',
+                footer: {
+                  selectText: '选择',
+                  navigateText: '切换'
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 })
