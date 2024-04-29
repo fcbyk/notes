@@ -7,7 +7,7 @@ outline: [2, 3, 4]
 
 <script lang="ts" setup>
 import NavLinkGroup from './../.vitepress/components/NavLinkGroup.vue'
-import { NAV_DATA } from './../.vitepress/model/bookmark'
+import NAV_DATA from './../.vitepress/model/bookmark'
 </script>
 
 # 浏览器书签

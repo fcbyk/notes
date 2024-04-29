@@ -1,6 +1,6 @@
-import type { NavData } from '../types'
+import type { NavData, NavLink } from '../types'
 
-export const NAV_DATA: NavData[] = [
+const NAV_DATA: NavData[] = [
   {
     title: 'AI',
     items: [
@@ -203,3 +203,77 @@ export const NAV_DATA: NavData[] = [
     ]
   },
 ]
+
+// 编写Nav和NavSort类，可链式添加书签
+class Nav {
+  data: NavData[]
+  constructor(NavData: NavData[]) {
+    this.data = NavData
+  }
+
+  getSort(title: string): NavSort {
+    const navItem = this.data.find(item => item.title === title);
+    if (navItem) {
+      return new NavSort(navItem);
+    } else {
+      return new NavSort({
+        title,
+        items: []
+      }
+      )
+    }
+  }
+
+  result(): NavData[] {
+    return this.data
+  }
+}
+
+class NavSort {
+  title: string;
+  items: NavLink[];
+
+  constructor(data: NavData) {
+    this.title = data.title;
+    this.items = data.items;
+  }
+
+  add(title: string, link: string, icon?: string | { svg: string }, desc?: string): NavSort {
+    const newItem: NavLink = { title, link, icon, desc };
+    this.items.push(newItem);
+    return this;
+  }
+
+  addTo(nav: Nav): Nav {
+    const sortIndex = nav.data.findIndex(item => item.title === this.title);
+    if (sortIndex !== -1) {
+      nav.data[sortIndex] = {
+        title: this.title,
+        items: this.items
+      };
+    } else {
+      nav.data.push({
+        title: this.title,
+        items: this.items
+      });
+    }
+    return nav;
+  }
+}
+
+const nav = new Nav(NAV_DATA)
+
+// 默认导出
+export default nav
+
+// .getSort("笔记")
+// .add("notion", "https://www.notion.so/")
+// .add("goodnotes", "https://www.goodnotes.com/zh-cn/features")
+// .addTo(nav)
+
+// .getSort("测试")
+// .add("notion", "https://www.notion.so/")
+// .add("goodnotes", "https://www.goodnotes.com/zh-cn/features")
+// .addTo(nav)
+
+.result()
