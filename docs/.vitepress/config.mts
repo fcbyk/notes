@@ -36,7 +36,18 @@ export default defineConfig({
     sidebar:{
       "/frontend/":[
         {
+          text:"阅读",
+          collapsed:true,
+          items:[
+            {
+              text:"CSS",
+              link:"/frontend/notes/css"
+            }
+          ]
+        },
+        {
           text:"练习",
+          collapsed:true,
           items:[
             {
               text: "导航栏",
