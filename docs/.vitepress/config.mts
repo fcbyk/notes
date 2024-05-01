@@ -34,18 +34,23 @@ export default defineConfig({
 
     // 配置侧边栏
     sidebar:{
-      "/css/":[
+      "/frontend/":[
         {
-          text: "导航栏",
-          link: "/css/navigation-bar",
-        },
-        {
-          text: "时钟",
-          link: "/css/clock",
-        },
-        {
-          text: "动画",
-          link: "/css/animation",
+          text:"练习",
+          items:[
+            {
+              text: "导航栏",
+              link: "/frontend/navigation-bar",
+            },
+            {
+              text: "时钟",
+              link: "/frontend/clock",
+            },
+            {
+              text: "动画",
+              link: "/frontend/animation",
+            }
+          ]
         }
       ],
       "/":[
@@ -62,14 +67,15 @@ export default defineConfig({
 
     nav:[
       {
-        text: "CSS",
-        link: "/css/navigation-bar"
+        text: "前端",
+        link: "/frontend/navigation-bar"
       },
       {
         text: "书签",
         link: "/bookmarks/"
       }
     ],
+
     search: {
       provider: 'local',
       options: {

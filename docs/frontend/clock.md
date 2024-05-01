@@ -31,3 +31,6 @@ import ClockOne from "../.vitepress/components/ClockOne.vue"
 
 ```
 :::
+<div class="code-box">
+    <div class="be-from"><a href="https://www.bilibili.com/video/BV12X4y157ca/" target="_blank">源于</a></div>
+</div>

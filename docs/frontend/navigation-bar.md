@@ -13,7 +13,7 @@ import NavigationBar3 from "../.vitepress/components/NavigationBar3.vue"
 
 <NavigationBar1/>
 
-以下为伪代码，[点击此处查看源码](https://github.com/fcbyk/docs/blob/main/docs/.vitepress/components/NavigationBar1.vue)
+<!-- 以下为伪代码，[点击此处查看源码]() -->
 
 ::: code-group
 
@@ -60,11 +60,15 @@ nav {
 ```
 :::
 
+<div class="code-box">
+    <div class="be-from"><a href="https://www.bilibili.com/video/BV1Jq4y1y7uy/" target="_blank">源于</a></div>
+    <div class="vue-code"><a href="https://github.com/fcbyk/docs/blob/main/docs/.vitepress/components/NavigationBar1.vue" target="_blank">vue3组件实现</a></div>
+</div>
+
 ### 侧边导航栏
 
 <NavigationBar2/>
 
-以下为伪代码，[点击此处查看源码](https://github.com/fcbyk/docs/blob/main/docs/.vitepress/components/NavigationBar2.vue)
 ::: code-group
 
 ```html [结构]
@@ -110,11 +114,15 @@ nav {
 ```
 :::
 
+<div class="code-box">
+    <div class="be-from"><a href="https://www.bilibili.com/video/BV1kb4y1J7L9/" target="_blank">源于</a></div>
+    <div class="vue-code"><a href="https://github.com/fcbyk/docs/blob/main/docs/.vitepress/components/NavigationBar2.vue" target="_blank">vue3组件实现</a></div>
+</div>
+
 ### 可下拉导航栏
 
 <NavigationBar3/>
 
-以下为伪代码，[点击此处查看源码](https://github.com/fcbyk/docs/blob/main/docs/.vitepress/components/NavigationBar3.vue)
 ::: code-group
 
 ```html [结构]
@@ -151,3 +159,8 @@ nav {
 }
 ```
 :::
+
+<div class="code-box">
+    <div class="be-from"><a href="https://www.bilibili.com/video/BV1S44y147oV/" target="_blank">源于</a></div>
+    <div class="vue-code"><a href="https://github.com/fcbyk/docs/blob/main/docs/.vitepress/components/NavigationBar3.vue" target="_blank">vue3组件实现</a></div>
+</div>
