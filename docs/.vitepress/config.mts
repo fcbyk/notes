@@ -2,7 +2,10 @@
 // 该数据结构可通过TypeScript中的声明语句进行查看
 
 // 辅助函数，参数为一个配置对象，函数的返回值也是一个配置对象，只是多了选项提示
-import { defineConfig } from 'vitepress'
+import { DefaultTheme, defineConfig } from 'vitepress'
+import { sidebar } from './themeConfig/sidebar'
+import { nav } from './themeConfig/nav'
+import { search } from './themeConfig/search'
 
 // 默认导出
 export default defineConfig({
@@ -33,109 +36,10 @@ export default defineConfig({
     },
 
     // 配置侧边栏
-    sidebar:{
-      "/408/algorithm/":[
-        {
-          text:"基础算法",
-          link:"/408/algorithm/"
-        }
-      ],
-      "/frontend/":[
-        {
-          text:"阅读",
-          collapsed:true,
-          items:[
-            {
-              text:"CSS",
-              link:"/frontend/notes/css"
-            }
-          ]
-        },
-        {
-          text:"练习",
-          collapsed:true,
-          items:[
-            {
-              text: "导航栏",
-              link: "/frontend/navigation-bar",
-            },
-            {
-              text: "时钟",
-              link: "/frontend/clock",
-            },
-            {
-              text: "动画",
-              link: "/frontend/animation",
-            }
-          ]
-        }
-      ],
-      "/":[
-        {
-          text: "关于本站",
-          link: "/",
-        },
-        {
-          text: "域名由来",
-          link: "/name",
-        }
-      ]
-    },
+    sidebar,
 
-    nav:[
-      {
-        text: "前端",
-        link: "/frontend/navigation-bar"
-      },
-      {
-        text: "408",
-        items:[
-          {
-            text:"数据结构与算法",
-            link:"/408/algorithm/"
-          },
-          // {
-          //   text:"操作系统",
-          //   link:"."
-          // },
-          // {
-          //   text:"计算机网络",
-          //   link:"."
-          // },
-          // {
-          //   text:"计算机组成原理",
-          //   link:"."
-          // },
-        ]
-      },
-      {
-        text: "书签",
-        link: "/bookmarks/"
-      }
-    ],
+    nav,
 
-    search: {
-      provider: 'local',
-      options: {
-        locales: {
-          root: {
-            translations: {
-              button: {
-                buttonText: '搜索文档',
-                buttonAriaLabel: '搜索文档'
-              },
-              modal: {
-                noResultsText: '无法找到相关结果',
-                resetButtonTitle: '清除查询条件',
-                footer: {
-                  selectText: '选择',
-                  navigateText: '切换'
-                }
-              }
-            }
-          }
-        }
-      }
-    }
+    search,
   }
 })
