@@ -10,7 +10,7 @@ export const nav: DefaultTheme.NavItem[] = [
         items: [
             {
                 text: "数据结构与算法",
-                link: "/408/algorithm/"
+                link: "/408/Linearlist/algorithm"
             },
             // {
             //   text:"操作系统",
