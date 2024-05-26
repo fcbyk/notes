@@ -2,7 +2,7 @@
 // 该数据结构可通过TypeScript中的声明语句进行查看
 
 // 辅助函数，参数为一个配置对象，函数的返回值也是一个配置对象，只是多了选项提示
-import { DefaultTheme, defineConfig } from 'vitepress'
+import { DefaultTheme, defineConfig} from 'vitepress'
 import { sidebar } from './themeConfig/sidebar'
 import { nav } from './themeConfig/nav'
 import { search } from './themeConfig/search'
@@ -10,12 +10,14 @@ import { search } from './themeConfig/search'
 // 默认导出
 export default defineConfig({
 
-  title: "小屋文档",
+  title: "不愉的笔记本",
 
   head: [
     // 引入图标库
     ['link', { rel: 'stylesheet', href: 'https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' }]
   ],
+
+  cleanUrls:true,
  
   // 主题相关配置
   themeConfig: {

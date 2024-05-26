@@ -18,11 +18,8 @@
 layout: doc
 ---
 # 关于本站
-本站由 [VitePress](https://vitepress.dev/zh/) 构建，部署在 [GitHub Pages](https://docs.github.com/zh/pages) 和 [阿里云服务器](https://www.aliyun.com/) 上，两者区别在于，GitHub Pages的更新更及时，阿里云的国内访问速度更快
-
-本站点的域名为 [docs.fcbyk.com](https://docs.fcbyk.com/)，访问阿里云部署的站点需要在域名添加 ali 前缀，即 [ali.docs.fcbyk.com](https://ali.docs.fcbyk.com/)
+本站由 [VitePress](https://vitepress.dev/zh/) 构建，一个笔记站点，第三方笔记软件的链接也会汇总这里，如语雀，Notion，GoodNotes等
 
 ## 目前在更新的内容
-目前正在更新css相关的笔记和练习，以及根目录下的文档等
 
-## 未完待续...
+目前正在更新环境搭建相关的内容...

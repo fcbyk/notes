@@ -13,6 +13,10 @@ export const sidebar:DefaultTheme.Sidebar = {
         {
             text: "域名由来",
             link: "/name",
+        },
+        {
+            text: "关于作者",
+            link: "/resume",
         }
     ]
 }

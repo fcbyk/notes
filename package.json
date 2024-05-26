@@ -1,5 +1,5 @@
 {
-  "name": "docs",
+  "name": "notes",
   "devDependencies": {
     "@mdit-vue/shared": "^2.1.2",
     "sass": "^1.75.0",
