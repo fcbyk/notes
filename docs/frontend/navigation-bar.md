@@ -3,9 +3,9 @@ layout: doc
 outline: [2,3]
 ---
 <script lang="ts" setup>
-import NavigationBar1 from "../.vitepress/components/NavigationBar1.vue"
-import NavigationBar2 from "../.vitepress/components/NavigationBar2.vue"
-import NavigationBar3 from "../.vitepress/components/NavigationBar3.vue"
+import NavigationBar1 from "./components/NavigationBar1.vue"
+import NavigationBar2 from "./components/NavigationBar2.vue"
+import NavigationBar3 from "./components/NavigationBar3.vue"
 </script>
 
 

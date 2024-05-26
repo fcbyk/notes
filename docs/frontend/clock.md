@@ -3,7 +3,7 @@ layout: doc
 outline: [2,3]
 ---
 <script lang="ts" setup>
-import ClockOne from "../.vitepress/components/ClockOne.vue"
+import ClockOne from "./components/ClockOne.vue"
 </script>
 
 ### 翻页时钟
