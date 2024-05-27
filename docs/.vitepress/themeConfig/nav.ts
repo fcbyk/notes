@@ -11,20 +11,12 @@ export const nav: DefaultTheme.NavItem[] = [
             {
                 text: "数据结构与算法",
                 link: "/408/Linearlist/algorithm"
-            },
-            // {
-            //   text:"操作系统",
-            //   link:"."
-            // },
-            // {
-            //   text:"计算机网络",
-            //   link:"."
-            // },
-            // {
-            //   text:"计算机组成原理",
-            //   link:"."
-            // },
+            }
         ]
+    },
+    {
+        text: "下载",
+        link: "/download/index.md"
     },
     {
         text: "书签",
