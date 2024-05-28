@@ -19,6 +19,10 @@ export const sidebar:DefaultTheme.Sidebar = {
         {
             text: "关于作者",
             link: "/resume",
+        },
+        {
+            text: "聊天机器人",
+            link: "/chat-bot",
         }
     ]
 }
