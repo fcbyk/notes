@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, defineEmits } from 'vue';
+import { ref } from 'vue';
 
 const emits = defineEmits(['close']); // 声明 close 事件
 
@@ -78,7 +78,7 @@ const closePhone = () => {
 
 .phone {
   position: fixed;
-  z-index: 51;
+  z-index: 100;
   width: 600px;
   height: 80vh;
   left: 30%;
@@ -86,6 +86,7 @@ const closePhone = () => {
   border-radius: 1rem;
   background-color: white;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, .4);
+  transition: all 0.3s ease;
 }
 
 .close-btn-1 {
@@ -116,5 +117,35 @@ const closePhone = () => {
   color: #333;
   text-align: center;
   cursor: move;
+}
+
+@media (max-width: 600px) {
+  .phone{
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    border-radius: 0;
+  }
+  .close-btn-1 {
+    @include close-btn(15px, rgba(255, 255, 255, 0), "<");
+    &::before {
+      content: "<";
+      color: rgb(0, 0, 0);
+      font-size: 1.5rem;
+    }
+
+    &:hover {
+    &::before {
+      content: "<";
+      color: rgb(0, 0, 0);
+      font-size: 1.5rem;
+    }
+  }
+  }
+
+.close-btn-2,.close-btn-3  {
+  display: none;
+}
 }
 </style>
