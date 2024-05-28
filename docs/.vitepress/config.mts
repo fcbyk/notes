@@ -6,6 +6,7 @@ import { DefaultTheme, defineConfig} from 'vitepress'
 import { sidebar } from './themeConfig/sidebar'
 import { nav } from './themeConfig/nav'
 import { search } from './themeConfig/search'
+import { notion,yuque } from './themeConfig/svg'
 
 // 默认导出
 export default defineConfig({
@@ -23,7 +24,9 @@ export default defineConfig({
   themeConfig: {
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/fcbyk/docs' }
+      { icon: 'github', link: 'https://github.com/fcbyk/docs' },
+      { icon: { svg: notion }, link: 'https://fcbyk.notion.site/Notion-41653c07189e4275bda6d6a4e833426d' },
+      { icon: { svg: yuque }, link: 'https://www.yuque.com/fcbyk' }
     ],
 
     // 把页面默认的英文改中文
