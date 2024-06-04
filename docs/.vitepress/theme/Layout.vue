@@ -22,5 +22,5 @@ const closeModal = () => {
 
 <template>
   <Modal v-if="chatbot" @close="closeModal"/>
-  <Layout></Layout>
+  <Layout v-bind="$attrs"></Layout>
 </template>
