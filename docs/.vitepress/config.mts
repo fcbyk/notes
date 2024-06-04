@@ -3,10 +3,9 @@
 
 // 辅助函数，参数为一个配置对象，函数的返回值也是一个配置对象，只是多了选项提示
 import { DefaultTheme, defineConfig} from 'vitepress'
-import { sidebar } from './themeConfig/sidebar'
-import { nav } from './themeConfig/nav'
-import { search } from './themeConfig/search'
-import { notion,yuque } from './themeConfig/svg'
+import { sidebar } from './theme-config/sidebar'
+import { nav } from './theme-config/nav'
+import { search } from './theme-config/search'
 
 // 默认导出
 export default defineConfig({
@@ -24,9 +23,7 @@ export default defineConfig({
   themeConfig: {
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/fcbyk/docs' },
-      { icon: { svg: notion }, link: 'https://fcbyk.notion.site/Notion-41653c07189e4275bda6d6a4e833426d' },
-      { icon: { svg: yuque }, link: 'https://www.yuque.com/fcbyk' }
+      { icon: 'github', link: 'https://github.com/fcbyk/docs' }
     ],
 
     // 把页面默认的英文改中文

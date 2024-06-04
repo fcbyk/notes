@@ -1,7 +1,8 @@
 <template>
-  <div class="phone" ref="phone" @mousedown="startDrag" @mousemove="draggingHandler" @mouseup="endDrag"
-    @mouseleave="endDrag">
-    <div class="phone-title" style="cursor: move;"></div>
+  <!-- 模糊滤镜 -->
+  <div class="blur-filter"></div>
+  <div class="phone">
+    <div class="phone-title"></div>
     <button class="close-btn-1" @click="closePhone"></button>
     <button class="close-btn-2"></button>
     <button class="close-btn-3"></button>
@@ -9,43 +10,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
-
 const emits = defineEmits(['close']); // 声明 close 事件
-
-const phone = ref<HTMLElement | null>(null);
-const isDragging = ref(false);
-let offsetX = 0;
-let offsetY = 0;
-
-const startDrag = (event: MouseEvent) => {
-  isDragging.value = true;
-  offsetX = event.clientX - phone.value!.offsetLeft;
-  offsetY = event.clientY - phone.value!.offsetTop;
-  document.addEventListener('mousemove', draggingHandler);
-};
-
-const draggingHandler = (event: MouseEvent) => {
-  if (isDragging.value) {
-    let newLeft = event.clientX - offsetX;
-    let newTop = event.clientY - offsetY;
-    // 边界检查
-    if (newLeft < 0) newLeft = 0;
-    if (newTop < 0) newTop = 0;
-    const maxWidth = window.innerWidth - phone.value!.offsetWidth;
-    if (newLeft > maxWidth) newLeft = maxWidth;
-    const maxHeight = window.innerHeight - phone.value!.offsetHeight;
-    if (newTop > maxHeight) newTop = maxHeight;
-    // 设置元素的位置
-    phone.value!.style.left = newLeft + 'px';
-    phone.value!.style.top = newTop + 'px';
-  }
-};
-
-const endDrag = () => {
-  isDragging.value = false;
-  document.removeEventListener('mousemove', draggingHandler);
-};
 
 const closePhone = () => {
   emits('close'); // 调用 close 事件
@@ -53,6 +18,18 @@ const closePhone = () => {
 </script>
 
 <style lang="scss" scoped>
+.blur-filter{
+    position: absolute;
+    z-index: 99;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+}
+
 @mixin close-btn($left, $color, $content) {
   position: absolute;
   top: 7.5px;
@@ -116,10 +93,9 @@ const closePhone = () => {
   border-radius: 1rem 1rem 0 0;
   color: #333;
   text-align: center;
-  cursor: move;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .phone{
     width: 100vw;
     height: 100vh;
@@ -127,25 +103,5 @@ const closePhone = () => {
     top: 0;
     border-radius: 0;
   }
-  .close-btn-1 {
-    @include close-btn(15px, rgba(255, 255, 255, 0), "<");
-    &::before {
-      content: "<";
-      color: rgb(0, 0, 0);
-      font-size: 1.5rem;
-    }
-
-    &:hover {
-    &::before {
-      content: "<";
-      color: rgb(0, 0, 0);
-      font-size: 1.5rem;
-    }
-  }
-  }
-
-.close-btn-2,.close-btn-3  {
-  display: none;
-}
 }
 </style>

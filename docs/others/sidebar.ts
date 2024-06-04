@@ -2,12 +2,12 @@ import { DefaultTheme } from "vitepress"
 
 const sidebar:DefaultTheme.SidebarItem[] = [
     {
-        text: "前端环境",
-        link: "/download/"
+        text: "浏览器书签",
+        link: "/others/bookmarks"
     },
     {
-        text: "后端环境",
-        link: "/download/backend"
+        text: "下载",
+        link: "/others/download"
     }
 ]
 

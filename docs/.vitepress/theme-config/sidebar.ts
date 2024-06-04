@@ -1,12 +1,10 @@
 import { DefaultTheme } from "vitepress"
-import sidebar_408 from "../../408/sidebar"
 import sidebar_fe from "../../frontend/sidebar"
-import sidebar_dl from "../../download/sidebar"
+import sidebar_dl from "../../others/sidebar"
 
 export const sidebar:DefaultTheme.Sidebar = {
-    "/408/": sidebar_408,
     "/frontend/": sidebar_fe,
-    "/download/":sidebar_dl,
+    "/others/":sidebar_dl,
     "/": [
         {
             text: "关于本站",
@@ -21,7 +19,7 @@ export const sidebar:DefaultTheme.Sidebar = {
             link: "/resume",
         },
         {
-            text: "聊天机器人",
+            text: "Q&A",
             link: "/chat-bot",
         }
     ]

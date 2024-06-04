@@ -1,5 +1,23 @@
 /* 编写根布局组件下需要覆盖的样式 */
 .bookmarks {
+    .aside{
+        max-width: 100px;
+    }
+    .content-container,
+    .content {
+        max-width: 100% !important;
+    }
+    .vp-doc h2 {
+        margin-top: 24px;
+    }
+
+    .vp-doc a {
+        text-decoration-line: none;
+      }
+}
+
+
+.bookmarks-bak {
     /* 覆盖全局的 vp-layout-max-width（仅当前页面使用） */
     --vp-layout-max-width: 1660px;
 
