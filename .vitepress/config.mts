@@ -3,14 +3,18 @@
 
 // 辅助函数，参数为一个配置对象，函数的返回值也是一个配置对象，只是多了选项提示
 import { DefaultTheme, defineConfig} from 'vitepress'
-import { sidebar } from './theme-config/sidebar'
-import { nav } from './theme-config/nav'
-import { search } from './theme-config/search'
+import { sidebar } from './config/sidebar'
+import { nav } from './config/nav'
+import { search } from './config/search'
 
 // 默认导出
 export default defineConfig({
 
-  title: "不愉的笔记本",
+  srcDir:"docs",
+
+  outDir:",dish",
+
+  title: "Beyoki's Notes",
 
   head: [
     // 引入图标库
@@ -23,7 +27,7 @@ export default defineConfig({
   themeConfig: {
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/fcbyk/docs' }
+      { icon: 'github', link: 'https://github.com/fcbyk/notes' }
     ],
 
     // 把页面默认的英文改中文

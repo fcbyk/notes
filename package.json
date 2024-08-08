@@ -3,13 +3,12 @@
   "devDependencies": {
     "@mdit-vue/shared": "^2.1.2",
     "sass": "^1.75.0",
-    "vitepress": "^1.1.3",
+    "vitepress": "^1.2.3",
     "vue": "^3.4.25"
   },
   "scripts": {
-    "docs:dev": "vitepress dev docs --port 80",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "dev": "vitepress dev --host 0.0.0.0",
+    "build": "vitepress build"
   },
   "author": "不是不余",
   "license": "MIT"

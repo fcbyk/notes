@@ -1,10 +1,9 @@
 ---
 layout: doc
-# prev: false
-# next: false
-# sidebar: false
-# aside: false
-# layoutClass: delete-nav
+prev: false
+next: false
+sidebar: false
+aside: false
 ---
 
 # 域名由来
