@@ -12,7 +12,7 @@ export default defineConfig({
 
   srcDir:"docs",
 
-  outDir:",dish",
+  outDir:"dish",
 
   title: "Beyoki's Notes",
 
