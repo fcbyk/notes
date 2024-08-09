@@ -1,0 +1,1 @@
+import{a4 as e,c as t,o as a}from"./chunks/framework.dGPInWOZ.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"index.md","filePath":"index.md"}'),n={name:"index.md"},d=Object.assign(n,{setup(r){return e().go("/practice/frontend/navigation-bar"),(o,s)=>(a(),t("div"))}});export{i as __pageData,d as default};
