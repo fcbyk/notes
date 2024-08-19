@@ -5,8 +5,12 @@ export const nav: DefaultTheme.NavItem[] = [
         text: "代码片段",
         items:[
             {
-                text:"css",
-                link:"/snippets/css/"
+                text:"JavaScript",
+                link:"/snippets/js/"
+            },
+            {
+                text:"数据结构",
+                link:"/snippets/ds/linear-list"
             }
         ]
     },
