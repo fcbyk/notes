@@ -14,7 +14,7 @@ export default defineConfig({
 
   outDir: "dist",
 
-  title: "Beyoki's Notes",
+  title: "前端笔记",
 
   head: [
     ['meta', { name: 'theme-color', content: '#ffffff' }],

@@ -1,6 +1,6 @@
 {
-    "name": "Beyoki's Notes",
-    "short_name": "fNotes",
+    "name": "前端笔记",
+    "short_name": "前端笔记",
     "start_url": "/",
     "display": "standalone",
     "theme_color": "#ffffff",

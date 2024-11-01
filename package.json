@@ -7,7 +7,7 @@
     "vue": "^3.4.25"
   },
   "scripts": {
-    "dev": "vitepress dev --host 0.0.0.0",
+    "dev": "vitepress dev",
     "build": "vitepress build"
   },
   "author": "不是不余",
